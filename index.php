@@ -26,6 +26,12 @@ while($row = pg_fetch_object($result)):
             <td><?= $row->nim ?></td>
             <td><?= $row->nama ?></td>
             <td><?= $row->kelas ?></td>
+            <td>
+<?php echo '<a href="hapus.php?nim=' . $row->nim . '">Hapus</a>' ?>
+            </td>
+            <td>
+<?php echo '<a href="ubah.php?nim=' . $row->nim . '">Ubah</a>' ?>
+            </td>
         </tr>
 <?php endwhile; ?>
     </tbody>
